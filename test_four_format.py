@@ -1,5 +1,4 @@
 import pytest
-from test_element import Test_element
 from four_format import Four_format
 
 
@@ -23,3 +22,4 @@ class Test_four_format:
         assert "0b1010 1101" == "{:08b}".format(Four_format(173))
         assert "0x0000 0000 dead beef" == "{:016x}".format(Four_format(0xdeadbeef))
         assert "0b0000 0000 0000 1011" == "{:016b}".format(Four_format(0xb))
+        assert "0b001 0101" == "{:07b}".format(Four_format(0x15))
