@@ -21,8 +21,7 @@ class Four_format:
         string = ("{:0{length}{type}}"
                   .format(self.number, length = length, type = type))
         step = 4
-        words = [string[i: i + step] for i in range(0, len(string), step)]
+        words = [string[i:i + step] for i in range(0, len(string), step)]
         output = pad + type
-        for word in words:
-            output += word + " "
+        output += " ".join(words)
         return output.rstrip()
